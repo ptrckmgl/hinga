@@ -37,24 +37,24 @@
     </div>
 
     <section class="">
-      <div class="flex flex-col justify-center items-center mt-5">
+      <div class="flex justify-center items-center gap-4 mt-20">
+        <button class="btn btn-neutral btn-outline text-2xl p-6" id="preset1">05:00</button>
+        <button class="btn btn-neutral btn-outline text-2xl p-6" id="preset2">10:00</button>
+        <button class="btn btn-neutral btn-outline text-2xl p-6" id="preset3">15:00</button>
+      </div>
+
+      <div class="flex flex-col justify-center items-center">
         <h1 class="text-[230px]" id="timer">00:00</h1>
       </div>
 
       <div class="flex flex-col justify-center items-center">
-        <input type="range" min="0" max="60" value="30" class="range range-neutral" id="slider" />
+        <input type="range" min="0" max="60" value="30" class="range range-neutral w-150" id="slider" />
       </div>
 
       <div class="flex justify-center items-center gap-4 mt-18">
-        <button class="btn btn-soft text-4xl p-6" id="preset1">05:00</button>
-        <button class="btn btn-soft text-4xl p-6" id="preset2">10:00</button>
-        <button class="btn btn-soft text-4xl p-6" id="preset3">15:00</button>
-      </div>
-
-      <div class="flex justify-center items-center gap-4 mt-10">
-        <button class="btn btn-neutral text-4xl p-6" id="start">Start</button>
-        <button class="btn btn-neutral text-4xl p-6" id="pause">Pause</button>
-        <button class="btn btn-neutral text-4xl p-6" id="reset">Reset</button>
+        <button class="btn btn-neutral text-2xl p-6" id="start">Start</button>
+        <button class="btn btn-neutral text-2xl p-6" id="pause">Pause</button>
+        <button class="btn btn-neutral text-2xl p-6" id="reset">Reset</button>
       </div>
     </section>
     <script src="script.js"></script>
