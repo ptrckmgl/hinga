@@ -1,5 +1,5 @@
 # hinga
 
-Hinga is an easy to use meditation timer.
+A minimalist meditation timer.
 
 Will be updated soon.
