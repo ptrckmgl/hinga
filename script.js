@@ -17,6 +17,11 @@ slider.oninput = function () {
   timer.innerHTML = `${this.value}:00`;
 };
 
+function playSound() {
+  let gong = new Audio("gong.mp3");
+  gong.play();
+}
+
 function updateTimerDisplay() {
   const minutes = Math.floor(duration / 60);
   let seconds = duration % 60;
@@ -27,7 +32,12 @@ function updateTimerDisplay() {
 function updateCountdown() {
   updateTimerDisplay();
   duration--;
-  duration = duration < 0 ? 0 && clearInterval(intervalId) : duration;
+  if (duration < 0) {
+    duration = 0;
+    clearInterval(intervalId);
+    console.log(duration);
+    playSound();
+  }
 }
 
 function updateSliderDisplay() {
@@ -41,6 +51,7 @@ function startTimer() {
     }
     if (!hasStarted) {
       updateCountdown();
+      playSound();
       hasStarted = true;
     }
     intervalId = setInterval(updateCountdown, 1000);
